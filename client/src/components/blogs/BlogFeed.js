@@ -9,10 +9,12 @@ const BlogFeed = () => {
     const fetchBlogs = async () => {
       try {
         const locationRes = await axios.get(
-          "https://ipinfo.io/json?token=<your-token>"
+          `https://ipinfo.io/json?token=${process.env.REACT_APP_IPINFO_TOKEN}`
         );
         const location = locationRes.data.country;
-        const res = await axios.get(`/api/blogs?location=${location}`);
+        const res = await axios.get(
+          `${process.env.REACT_APP_SERVER_API}/api/blogs?location=${location}`
+        );
         setBlogs(res.data);
       } catch (error) {
         console.error("Error fetching blogs:", error);

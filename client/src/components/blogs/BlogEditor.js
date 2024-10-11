@@ -18,7 +18,10 @@ const BlogEditor = () => {
         content: editorData,
         token: sessionStorage.getItem("authToken"),
       };
-      await axios.post("/api/blogs", blogData);
+      await axios.post(
+        `${process.env.REACT_APP_SERVER_API}/api/blogs`,
+        blogData
+      );
       alert("Blog created successfully!");
     } catch (error) {
       console.error("Error creating blog:", error);

@@ -30,11 +30,14 @@ const Signup = () => {
 
     try {
       // Send POST request to backend for signup
-      const res = await axios.post("/api/auth/signup", {
-        username,
-        email,
-        password,
-      });
+      const res = await axios.post(
+        `${process.env.REACT_APP_SERVER_API}/api/auth/signup`,
+        {
+          username,
+          email,
+          password,
+        }
+      );
 
       // If successful, store token and redirect to home page
       localStorage.setItem("token", res.data.token);

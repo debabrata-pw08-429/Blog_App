@@ -10,7 +10,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/login", { email, password });
+      const res = await axios.post(
+        `${process.env.REACT_APP_SERVER_API}/api/login`,
+        { email, password }
+      );
       sessionStorage.setItem("authToken", res.data.token);
       navigate("/editor");
     } catch (error) {
