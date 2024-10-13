@@ -1,31 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <Link className="navbar-brand" to="/">
-        MERN Blog
+    <nav className={styles.navbarContainer}>
+      <Link className={styles.navbarBrand} to="/">
+        BlogByte.io
       </Link>
-      <div className="collapse navbar-collapse">
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <Link className="nav-link" to="/">
+      <div className={styles.navbarCollapse}>
+        <ul className={styles.navbarNav}>
+          <li className={styles.navItem}>
+            <Link className={styles.navLink} to="/">
               Blog Feed
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/editor">
+          <li className={styles.navItem}>
+            <Link className={styles.navLink} to="/editor">
               Create Blog
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/login">
+          <li className={styles.navItem}>
+            <Link className={styles.navLink} to="/login">
               Login
             </Link>
           </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/signup">
+          <li className={styles.navItem}>
+            <Link className={styles.navLink} to="/signup">
               Signup
             </Link>
           </li>

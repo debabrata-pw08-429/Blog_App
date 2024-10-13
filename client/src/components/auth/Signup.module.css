@@ -1,0 +1,50 @@
+/* Signup.module.css */
+.signupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.signupTitle {
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+  color: #333;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+.signupInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signupButton {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #28a745; /* Same as login button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signupButton:hover {
+  background-color: #218838; /* Same as login button hover */
+}
+
+.signupError {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
+}

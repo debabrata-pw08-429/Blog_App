@@ -1,0 +1,51 @@
+.blogFeedContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.blogFeedTitle {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.blogCard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.blogCardBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.blogCardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.blogCardContent {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.blogCardLocation {
+  font-size: 0.9rem;
+  color: #999;
+  text-align: right;
+}
+
+.noBlogsMessage {
+  font-size: 1.2rem;
+  color: #666;
+}
